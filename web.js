@@ -4,6 +4,7 @@ const PORT = 3000
 const db = './db.json'
 
 const server = http.createServer((req, res)=>{
+    
     let {method, url} = req
     if((method == 'GET' || method == 'POST') && url.toLowerCase() == '/allusers'){
         fs.promises.readFile(db)
